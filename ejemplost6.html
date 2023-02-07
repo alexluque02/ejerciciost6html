@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplosT6</title>
+
+    <style type="text/css">
+        table {
+            width: 400px;
+            border: 2px solid black;
+            border-collapse: collapse;
+            /*El border-collapse: collapse; Une los bordes de todos los td.
+            El border-collapse: separate; Es el valor por defecto y deja cada celda sin unificar*/
+            margin: 0 auto;
+            caption-side: bottom;
+        }
+        caption{
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+
+        tr {
+            border: 2px solid black;
+            /*No se aplica el border ya que a tr no se le puede dar estilos*/
+        }
+
+        td {
+            width: 20%;
+            height: 50px;
+            border: 2px solid black;
+            text-align: center;
+             /*--> PROPIEDAD NUEVA: Puede usar middle(por defecto),top, center,bottom*/
+        }
+        tfoot td{
+            vertical-align: top;
+        }
+
+        td:nth-child(odd){/*impar*//*3n+1 multiplos de 3*/
+            background-color: aquamarine;
+        }
+        td:nth-child(even){/*Coge impar y par en cada propiedad (thead, tbody..)*/
+            background-color: blueviolet;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Notas en LMSGI</h1>
+
+    <table summary="Clasificación puntuaciones"><!--Como el alt de las imágenes muy importante (motores de búsqueda)-->
+        <caption>
+        <!--Se pone fuera de la tabla no confundir con tfoot ni thead estion caption-side-->
+            HOLAAAOLAAOLAL
+       </caption>
+       <thead><!--Etiqueta semántica, motores de búsqueda-->
+            <tr>
+
+                <td>Alumno</td> <!--si en vez de td ponemos th se pone en negrita-->
+                <td>Ex T5</td>
+                <td>Bol T5</td>
+                <td>Proy T4</td>
+                <td>Bol T4</td>
+
+            </tr>
+       </thead>
+       <tbody>
+            <tr>
+
+                <td>Manolito gafotas</td>
+                <td colspan="2">8.5</td> <!--El colspan se usa para unir una misma celda en dos columnas horizontalmente
+                                            y para unir una misma celda pero verticalmente usamos rowspan-->
+                <td>9.2</td>
+                <td>3.5</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Filemón Pi</td>
+                <td>5.3</td>
+                <td>6.2</td>
+                <td>2.5</td>
+                <td>8.5</td>
+
+
+            </tr>
+
+            <tr>
+
+                <td>Mortadelo</td>
+                <td>2.3</td>
+                <td>8.2</td>
+                <td>1.5</td>
+                <td>9.5</td>
+
+            </tr>
+       </tbody>
+       <tfoot>
+            <tr>
+                <td colspan="5">Datos actualizados hoy</td>
+            </tr>
+       </tfoot>
+    </table>
+
+</body>
+
+</html>

@@ -45,6 +45,15 @@
         td:nth-child(even){/*Coge impar y par en cada propiedad (thead, tbody..)*/
             background-color: blueviolet;
         }
+        colgroup:first-of-type{/*El primero que me encuentre*//*No lo coge por los estilos anteriores*/
+            background-color: red;
+        }
+        tr:hover{/*si td tiene otros estilos lo machacan*/
+            background-color: blue;
+        }
+        tr:hover>td:first-child{/*Para realtar la primera fila de la columna cuando se haga hover en cualquier columna de la fila*/
+            color: red;
+        }
     </style>
 
 </head>
@@ -58,6 +67,7 @@
         <!--Se pone fuera de la tabla no confundir con tfoot ni thead estion caption-side-->
             HOLAAAOLAAOLAL
        </caption>
+       <colgroup span="2"></colgroup><!--Las dos primeras columnas de cada fila-->
        <thead><!--Etiqueta semántica, motores de búsqueda-->
             <tr>
 

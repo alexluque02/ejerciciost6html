@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+       input:focus{/*Focus es el campo donde tienes el cursor*/
+        background-color: green;
+       }
+    </style>
+</head>
+<body>
+    <h1>Foirmulario de registro</h1>
+    <form name="registro" action="" method="" autocomplete="" enctype="multipart/form-data">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre" required autofocus autocomplete>
+        <!--Autofocus guarda un historial de lo que he hecho antes y me pone el nombre automáticamente-->
+        <!--El autocomplete tiene que estar al principio del formulario también-->
+        <br>
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos" id="apellidos" required>
+        <br>
+        <input type="submit" name="enviar" value="ENVIAR">
+    </form>
+</body>
+</html>

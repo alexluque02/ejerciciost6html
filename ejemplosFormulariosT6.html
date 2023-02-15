@@ -8,14 +8,19 @@
     <style type="text/css">
        input:focus{/*Focus es el campo donde tienes el cursor*/
         background-color: green;
-       }
+        border: 1px solid red;
+        outline: none;
+       }/*Cuando estas en focus a todas las cajas les sale un border automáticamente (outline)*/
     </style>
 </head>
 <body>
     <h1>Foirmulario de registro</h1>
     <form name="registro" action="" method="" autocomplete="" enctype="multipart/form-data">
         <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre" required autofocus autocomplete>
+        <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre" 
+        required autofocus autocomplete maxlength="30" size="20" pattern="[A-Za-z]"><!--Se ven solo espacio para los caracteres seleccionados--> 
+        <!--http://estilow3b.com/ejemplos-comunes-de-expresiones-regulares-javascript/ -> Expresiones pattern-->
+        <!--Maxlength: máximo de caracteres-->
         <!--Autofocus guarda un historial de lo que he hecho antes y me pone el nombre automáticamente-->
         <!--El autocomplete tiene que estar al principio del formulario también-->
         <br>

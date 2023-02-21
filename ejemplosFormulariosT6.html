@@ -1,33 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style type="text/css">
-       input:focus{/*Focus es el campo donde tienes el cursor*/
-        background-color: green;
-        border: 1px solid red;
-        outline: none;
-       }/*Cuando estas en focus a todas las cajas les sale un border automáticamente (outline)*/
+        input[type="text"]:focus {
+            /*Focus es el campo donde tienes el cursor*/
+            background-color: rgb(252, 248, 184);
+            border: 1px solid rgb(0, 0, 0);
+            outline: none;
+        }
+
+        /*Cuando estas en focus a todas las cajas les sale un border automáticamente (outline)*/
+        nav a[href="www.marca.com"] {}
+
+        .imagen[alt="una foto"] {
+            /*Selectores de atributos*/
+
+        }
+        form{
+            display: flex;
+        }
+        fieldset{
+            background-color: yellowgreen;
+            border: 2px solid gray;
+        }
+        legend{
+            margin: 0 auto;
+            border: 1px solid black;
+            background-color: white;
+        }
     </style>
 </head>
+
 <body>
-    <h1>Foirmulario de registro</h1>
-    <form name="registro" action="" method="" autocomplete="" enctype="multipart/form-data">
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre" 
-        required autofocus autocomplete maxlength="30" size="20" pattern="[A-Za-z]"><!--Se ven solo espacio para los caracteres seleccionados--> 
-        <!--http://estilow3b.com/ejemplos-comunes-de-expresiones-regulares-javascript/ -> Expresiones pattern-->
-        <!--Maxlength: máximo de caracteres-->
-        <!--Autofocus guarda un historial de lo que he hecho antes y me pone el nombre automáticamente-->
-        <!--El autocomplete tiene que estar al principio del formulario también-->
-        <br>
-        <label for="apellidos">Apellidos</label>
-        <input type="text" name="apellidos" id="apellidos" required>
-        <br>
-        <input type="submit" name="enviar" value="ENVIAR">
+    <h1>Formulario de registro</h1>
+    <form name="registro" action="" method="POST" autocomplete="" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre" required autofocus autocomplete
+                maxlength="30" size="20" <!--pattern="[A-Za-z]"
+                --><!--Se ven solo espacio para los caracteres seleccionados-->
+            <!--http://estilow3b.com/ejemplos-comunes-de-expresiones-regulares-javascript/ -> Expresiones pattern-->
+            <!--Maxlength: máximo de caracteres-->
+            <!--Autofocus guarda un historial de lo que he hecho antes y me pone el nombre automáticamente-->
+            <!--El autocomplete tiene que estar al principio del formulario también-->
+            <br>
+            <label for="apellidos">Apellidos</label>
+            <input type="text" name="apellidos" id="apellidos" required>
+            <br><br>
+            <label for="genero">Género</label><br>
+            <input type="radio" name="genero" value="M" checked>Masculino<br><!--Checked para que se marque solo-->
+            <input type="radio" name="genero" value="F">Femenino<br>
+            <br>
+            <label for="aficiones">Aficiones</label><br>
+            <input type="checkbox" name="aficiones" value="deporte">Hacer deporte<br>
+            <input type="checkbox" name="aficiones" value="videojuegos">Jugar a videojuegos<br>
+            <input type="checkbox" name="aficiones" value="lectura">Leer<br><br>
+            <label for="prov">Provincia</label><br>
+            <select name="prov" id=""><!--size y multiple-->
+                <option value="svq">Sevilla</option>
+                <option value="val" selected>Valencia</option>
+                <option value="cad">Cádiz</option>
+                <option value="mad">Madrid</option>
+                <option value="bcn">Barcelona</option>
+                <option value="ten">Tenerife</option>
+                <option value="ali">Alicante</option>
+                <option value="alm">Almería</option>
+                <option value="gra">Granada</option>
+                <option value="ast">Asturias</option>
+            </select><br><br>
+            <label for="foto">Añada un archivo HTML</label><br>
+            <!--<input type="file" name="foto" id="foto" accept="image/*"><br><br><!--Tipos de archivos: extension, audio/*, video/*, image/*-->
+            <input type="file" name="html" id="html" accept=".html,.pdf"><br><br>
+            <label for="edad">Edad</label>
+            <input type="number" name="edad" id="edad" min="0" max="99" step="5" value="15"><br><br>
+            <label for="email">Diga su email</label>
+            <input type="email"><br>
+            <label for="password">Diga su contraseña</label>
+            <input type="password"><br>
+            <label for="color">Eliga color</label>
+            <input type="color"><br>
+            <label for="url">Ponga el enlace a su página web</label>
+            <input type="url"><br><br>
+            <label for="otros">Otros intereses</label>
+            <input type="text" name="otros" id="otros" list="listaIntereses">
+            <datalist id="listaIntereses">
+                <option value="Jugar al fútbol"></option>
+                <option value="Comer"></option>
+                <option value="Cagar"></option>
+            </datalist><br><br>
+            <label for="fnac">Fecha de nacimiento</label><br>
+            <input type="date" name="fnac" id="fnac" min="1990-01-01" max="2023-02-21"><br>
+            <input type="time"><!--Para hora--><br><!--week, month, datetime--><br>
+            <label for="texto">Cuéntame tu vida</label><br>
+            <textarea name="texto" id="" cols="50" rows="10" maxlength="240"></textarea><br>
+            <input type="submit" name="enviar" value="Enviar">
+            <!--<input type="image" name="enviar" src="img/bet.png" action="">-->
+            <input type="reset" name="borrar" value="Borrar Todo">
+        </fieldset>
     </form>
 </body>
+
 </html>

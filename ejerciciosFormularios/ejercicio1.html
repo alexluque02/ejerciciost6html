@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        form{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+        label{
+            padding: 5px;
+        }
+        fieldset{
+            width: 300px;
+        }
+        .botones{
+            display: flex;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        #enviar, #borrar{
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Formulario</legend>
+        <form name="registro" action="" method="POST" autocomplete="" enctype="multipart/form-data">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Escriba su nombre"
+            maxlength="20" minlength="3" required autofocus autocomplete> <br>
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="name" name="name" placeholder="Escriba su apellido"
+            maxlength="40" minlength="3" required autocomplete> <br><br>
+            <label for="edad">Edad</label>
+            <input type="number" id="edad" name="edad" max="99" min="18"
+            value="18"> <br><br>
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required placeholder="Introduzca su email"><br><br>
+            <label for="navegadorFav">Navegador Favorito</label><br>
+            <select name="navegadorFav" id="navegadorFav" required>
+                <option value="Firefox" selected>Firefox</option>
+                <option value="Chrome">Chrome</option>
+                <option value="Edge">Edge</option>
+                <option value="Opera">Opera</option>
+            </select>
+            <br><br>
+            <div class="botones">
+                <input type="submit" name="enviar" id="enviar" value="Enviar">
+                <input type="reset" name="borrar" id="borrar" value="Borrar todo">
+            </div>
+        </form>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario de alta</title>
+	<style>
+		form {
+			max-width: 500px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #f4f4f4;
+			border-radius: 5px;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 5px;
+			font-weight: bold;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		select {
+			width: 95%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border: none;
+			border-radius: 3px;
+			font-size: 16px;
+			color: #555;
+			background-color: #fff;
+			box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+		}
+
+		input[type="radio"],
+		input[type="checkbox"] {
+			margin-right: 5px;
+			vertical-align: middle;
+		}
+
+		button[type="submit"] {
+			display: block;
+			margin: 20px auto;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 3px;
+			font-size: 16px;
+			color: #fff;
+			background-color: #007bff;
+			cursor: pointer;
+
+		}
+
+		button[type="submit"]:hover {
+			background-color: #0069d9;
+		}
+
+		.checkbox{
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 20px;
+		}
+
+		.checkbox label {
+			margin-right: 10px;
+			font-weight: normal;
+		}
+        button>img{
+            width: 10%;
+        }
+	</style>
+</head>
+<body>
+	<form>
+		<label for="nombre">Nombre y apellidos:</label>
+		<input type="text" id="nombre" name="nombre" required>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required>
+
+		<label for="usuario">Nombre de usuario:</label>
+		<input type="text" id="usuario" name="usuario" required>
+
+		<label for="password">Contraseña:</label>
+		<input type="password" id="password" name="password" required>
+
+		<label for="confirm-password">Repetir contraseña:</label>
+		<input type="password" id="confirm-password" name="confirm-password" required>
+
+		<label>Sexo:</label>
+		<label for="sexo-m"><input type="radio" id="sexo-m" name="sexo" value="masculino">Masculino</label>
+		<label for="sexo-f"><input type="radio" id="sexo-f" name="sexo" value="femenino">Femenino</label>
+
+		<label for="fecha-nac">Fecha de nacimiento:</label>
+		<input type="date" id="fecha-nac" name="fecha-nac" required>
+
+		<label>Aficiones:</label>
+		<div class="checkbox">
+			<label for="aficion1"><input type="checkbox" id="aficion1" name="aficiones[]" value="deporte">Deporte</label>
+			<label for="aficion2"><input type="checkbox" id="aficion2" name="aficiones[]" value="lectura">Lectura</label>
+			<label for="aficion3"><input type="checkbox" id="aficion3" name="aficiones[]" value="viajes">Viajes</label>
+            <label for="aficion4"><input type="checkbox" id="aficion4" name="aficiones[]" value="cine">Cine</label>
+            <label for="aficion5"><input type="checkbox" id="aficion5" name="aficiones[]" value="música">Música</label>
+            <label for="aficion6"><input type="checkbox" id="aficion6" name="aficiones[]" value="juegos">Juegos</label>
+            <label for="aficion7"><input type="checkbox" id="aficion7" name="aficiones[]" value="cocina">Cocina</label>
+            <label for="aficion8"><input type="checkbox" id="aficion8" name="aficiones[]" value="arte">Arte</label>
+            <label for="aficion9"><input type="checkbox" id="aficion9" name="aficiones[]" value="tecnología">Tecnología</label>
+            <label for="aficion10"><input type="checkbox" id="aficion10" name="aficiones[]" value="mascotas">Mascotas</label>
+            <label for="aficion11"><input type="checkbox" id="aficion11" name="aficiones[]" value="naturaleza">Naturaleza</label>
+            <label for="aficion12"><input type="checkbox" id="aficion12" name="aficiones[]" value="otros">Otros</label>
+        </div>
+        <button type="submit">
+            <img src="../img/send.png" alt="Enviar">
+        </button>
+    </form>
+</body>
+</html>

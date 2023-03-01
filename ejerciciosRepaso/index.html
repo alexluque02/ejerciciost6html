@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Ejercicio de Repaso</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <form action="" method="post" action="#" name="registro" action="" autocomplete=""
+        enctype="multipart/form-data">
+            <fieldset>
+                <legend>Alquila tu disfraz de Carnaval</legend>
+                <div class="form-group">
+                    <label for="nombre">Nombre y apellidos</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escriba su nombre y apellidos" required autocomplete>
+                    <label for="usuario">Usuario</label>
+                    <input type="text" id="usuario" name="usuario" required>
+                    <label for="contrasena">contraseña</label>
+                    <input type="password" id="contrasena" name="Contrasena" required>
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="cantidad">Cantidad de disfraces</label>
+                    <input type="number" id="cantidad" name="cantidad" max="10" min="1" value="1" required>
+                    <label for="genero">Introducta el sexo</label>
+                    <input type="radio" id="genero" name="genero" value="M" checked> Masculino
+                    <input type="radio" id="genero" name="genero" value="F"> Femenino
+                    <label for="tipo">Tipo de disfraz</label>
+                    <select name="tipo" id="tipo" required>
+                        <option value="" selected></option>
+                        <option value="spi">Spiderman</option>
+                        <option value="cat">Cat Woman</option>
+                        <option value="bat">Batman</option>
+                    </select>
+                    <label for="superheroes">Superhéroes Favoritos</label>
+                    <input type="checkbox" name="superheroes" value="super">Superman<br>
+                    <input type="checkbox" name="superheroes" value="bat">Batman<br>
+                    <input type="checkbox" name="superheroes" value="iron">IronMan<br>
+                    <input type="checkbox" name="superheroes" value="spid">Spiderman<br>
+                </div>
+            </fieldset>
+            <input type="submit" id="alquilar" name="alquilar" value="Alquilar">
+        </form>
+        </div>
+        <div class="container">
+            <table summary="Tabla de precios">
+                <caption>Precios de los disfraces</caption>
+                <thead>
+                    <tr>
+                        <th colspan="4">Precios</th>
+                    </tr>
+                    <tr>
+                        <th>Talla</th>
+                        <th>1 Día</th>
+                        <th>2 Días</th>
+                        <th>3 Días</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>S</th>
+                        <td>20,00€</td>
+                        <td>40,00€</td>
+                        <td>50,00€</td>
+                    </tr>
+                    <tr>
+                        <th>M</th>
+                        <td colspan="2">30,00€</td>
+                        <td>50,00€</td>
+                    </tr>
+                    <tr>
+                        <th>L</th>
+                        <td>40,00€</td>
+                        <td colspan="2">60,00€</td>
+                    </tr>
+                    <tr>
+                        <th>XL</th>
+                        <td>30,00€</td>
+                        <td>60,00€</td>
+                        <td>90,00€</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>

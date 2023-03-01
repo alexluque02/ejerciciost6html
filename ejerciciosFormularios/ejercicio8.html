@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <title>Formulario de reserva de hotel</title>
+  <title>Formulario ejercicio 8</title>
   <link rel="stylesheet" href="ejercicio8.css">
 </head>
+
 <body>
   <div class="container">
-    <form class="reservation-form">
-      <h1>Reserva de hotel</h1>
-      <div class="form-group">
-        <label for="guests">Número de huéspedes</label>
-        <div class="quantity">
-          <button class="decrement-button" type="button">-</button>
-          <input type="number" id="guests" name="guests" value="1" min="1" max="10" required>
-          <button class="increment-button" type="button">+</button>
+    <form class="reservation-form" method="post" action="#" name="registro" action="" autocomplete=""
+      enctype="multipart/form-data">
+      <fieldset>
+        <legend>Reserva de hotel</legend>
+        <div class="form-group">
+          <label for="guests">Número de huéspedes</label>
+          <div class="quantity">
+            <input type="number" id="guests" name="guests" value="1" min="1" max="10" required>
+          </div>
         </div>
-      </div>
-      <div class="form-group">
-        <label for="check-in-date">Fecha de entrada</label>
-        <input type="date" id="check-in-date" name="check-in-date" required>
-      </div>
-      <div class="form-group">
-        <label for="check-out-date">Fecha de salida</label>
-        <input type="date" id="check-out-date" name="check-out-date" required>
-      </div>
-      <div class="form-group">
-        <label for="room-type">Tipo de habitación</label>
-        <select id="room-type" name="room-type" required>
-          <option value="">Selecciona una opción</option>
-          <option value="single">Individual</option>
-          <option value="double">Doble</option>
-          <option value="suite">Suite</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <button type="submit">Reservar</button>
+        <div class="form-group2">
+          <div class="form-duo">
+            <label for="check-in-date">Fecha de entrada</label>
+            <input type="date" id="check-in-date" name="check-in-date" required>
+          </div>
+          <div class="form-duo">
+            <label for="check-out-date">Fecha de salida</label>
+            <input type="date" id="check-out-date" name="check-out-date" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="room-type">Tipo de habitación</label>
+          <select id="room-type" name="room-type" required>
+            <option value="">Selecciona una opción</option>
+            <option value="single">Individual</option>
+            <option value="double">Doble</option>
+            <option value="suite">Suite</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <button type="submit">Reservar</button>
+      </fieldset>
     </form>
   </div>
 </body>
+
 </html>

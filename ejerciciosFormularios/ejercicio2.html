@@ -1,124 +1,151 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Formulario de registro</title>
+	<title>Formulario ejercicio 2</title>
 	<style>
-		h1{
+		h1 {
 			padding: 10px;
 		}
-		main{
+
+		main {
 			width: 50%;
-			border: 1px solid green;
+			border: 1px solid gray;
+			max-width: 1200px;
+			margin-top: 10px;
+			margin: 0 auto;
+			padding: 20px;
+			box-shadow: 5px -5px #4CAF50;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 0.9em;
 		}
+
 		.izquierda label {
 			display: block;
 			margin-top: 10px;
 		}
-		.izquierda{
-			border-right: 1px solid grey;
+
+		.izquierda {
 			margin-right: 20px;
 		}
-		.derecha .d1 label{
+
+		.derecha .d1 label {
 			display: block;
 		}
-		
-		.sex, .fec, .check1, .check2{
+
+		input[type="text"], input[type="email"], input[type="password"]{
+			width: 90%;
+		} 
+		.sex,
+		.fec,
+		.check1,
+		.check2 {
 			flex: 1 1 50%
 		}
-		input[type="submit"] {
+
+		input[type="image"] {
 			background-color: #4CAF50;
 			color: white;
-			padding: 10px 20px;
+			padding: 5px 20px;
 			border: none;
 			border-radius: 4px;
 			cursor: pointer;
-			margin: 0 auto;
-			margin-right: 10px;
+			margin-left: 285px;
+			width: 5%;
 		}
-		form{
+
+		form {
 			width: 100%;
 		}
-		fieldset, .ch, .d1{
+
+		fieldset,
+		.ch,
+		.d1 {
 			display: flex;
 		}
-		.izquierda, .derecha{
+
+		.izquierda,
+		.derecha {
 			flex: 1 1 50%;
 		}
-		fieldset{
+
+		fieldset {
 			border: transparent;
 		}
 	</style>
 </head>
+
 <body>
 	<main>
-	<h1>Formulario de registro</h1>
-	<form>
-		<fieldset>
-			<div class="izquierda">
-				<label for="nombre">Nombre y apellidos:</label>
-				<input type="text" id="nombre" name="nombre">
+		<h1>Formulario de registro</h1>
+		<form name="registro" action="" method="POST" autocomplete="" enctype="multipart/form-data">
+			<fieldset>
+				<div class="izquierda">
+					<label for="nombre">Nombre y apellidos:</label>
+					<input type="text" id="nombre" name="nombre" required>
 
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email">
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required>
 
-				<label for="usuario">Nombre de usuario:</label>
-				<input type="text" id="usuario" name="usuario">
+					<label for="usuario">Nombre de usuario:</label>
+					<input type="text" id="usuario" name="usuario" required>
 
-				<label for="contrasena">Contraseña:</label>
-				<input type="password" id="contrasena" name="contrasena">
+					<label for="contrasena">Contraseña:</label>
+					<input type="password" id="contrasena" name="contrasena" required>
 
-				<label for="repetir-contrasena">Repetir contraseña:</label>
-				<input type="password" id="repetir-contrasena" name="repetir-contrasena">
-			</div>
-			<div class="derecha">
-				<div class="d1">
-					<div class="sex">
-						<label>Sexo:</label>
-						<label for="sexo-m">Masculino</label>
-						<input type="radio" id="sexo-m" name="sexo" value="masculino">
-						<label for="sexo-f">Femenino</label>
-						<input type="radio" id="sexo-f" name="sexo" value="femenino"><br><br>
+					<label for="repetir-contrasena">Repetir contraseña:</label>
+					<input type="password" id="repetir-contrasena" name="repetir-contrasena" required>
+				</div>
+				<div class="derecha">
+					<div class="d1">
+						<div class="sex">
+							<label>Sexo:</label>
+							<label for="sexo-m">Masculino</label>
+							<input type="radio" id="sexo-m" name="sexo" value="masculino">
+							<label for="sexo-f">Femenino</label>
+							<input type="radio" id="sexo-f" name="sexo" value="femenino"><br><br>
+						</div>
+						<div class="fec">
+							<label for="fecha-nacimiento">Fecha de nacimiento:</label>
+							<input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+						</div>
 					</div>
-					<div class="fec">
-						<label for="fecha-nacimiento">Fecha de nacimiento:</label>
-						<input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
+					<label>Aficiones:</label><br><br>
+					<div class="ch">
+						<div class="check1">
+							<label for="aficion1">Leer</label>
+							<input type="checkbox" id="aficion1" name="aficiones[]" value="leer"><br>
+							<label for="aficion2">Cine</label>
+							<input type="checkbox" id="aficion2" name="aficiones[]" value="cine"><br>
+							<label for="aficion3">Deportes</label>
+							<input type="checkbox" id="aficion3" name="aficiones[]" value="deportes"><br>
+							<label for="aficion4">Música</label>
+							<input type="checkbox" id="aficion4" name="aficiones[]" value="musica"><br>
+							<label for="aficion5">Viajar</label>
+							<input type="checkbox" id="aficion5" name="aficiones[]" value="viajar"><br>
+							<label for="aficion6">Bailar</label>
+							<input type="checkbox" id="aficion6" name="aficiones[]" value="bailar">
+						</div>
+						<div class="check2">
+							<label for="aficion7">Fotografía</label>
+							<input type="checkbox" id="aficion7" name="aficiones[]" value="fotografia"><br>
+							<label for="aficion8">Cocinar</label>
+							<input type="checkbox" id="aficion8" name="aficiones[]" value="cocinar"><br>
+							<label for="aficion9">Arte</label>
+							<input type="checkbox" id="aficion9" name="aficiones[]" value="arte"><br>
+							<label for="aficion10">Tecnología</label>
+							<input type="checkbox" id="aficion10" name="aficiones[]" value="tecnologia"><br>
+							<label for="aficion11">Juegos</label>
+							<input type="checkbox" id="aficion11" name="aficiones[]" value="juegos"><br>
+							<label for="aficion12">Política</label>
+							<input type="checkbox" id="aficion12" name="aficiones[]" value="politica">
+						</div>
 					</div>
 				</div>
-				<label>Aficiones:</label><br><br>
-				<div class="ch">
-					<div class="check1">
-						<label for="aficion1">Leer</label>
-						<input type="checkbox" id="aficion1" name="aficiones[]" value="leer"><br>
-						<label for="aficion2">Cine</label>
-						<input type="checkbox" id="aficion2" name="aficiones[]" value="cine"><br>
-						<label for="aficion3">Deportes</label>
-						<input type="checkbox" id="aficion3" name="aficiones[]" value="deportes"><br>
-						<label for="aficion4">Música</label>
-						<input type="checkbox" id="aficion4" name="aficiones[]" value="musica"><br>
-						<label for="aficion5">Viajar</label>
-						<input type="checkbox" id="aficion5" name="aficiones[]" value="viajar"><br>
-						<label for="aficion6">Bailar</label>
-						<input type="checkbox" id="aficion6" name="aficiones[]" value="bailar">
-					</div>
-					<div class="check2">
-						<label for="aficion7">Fotografía</label>
-						<input type="checkbox" id="aficion7" name="aficiones[]" value="fotografia"><br>
-						<label for="aficion8">Cocinar</label>
-						<input type="checkbox" id="aficion8" name="aficiones[]" value="cocinar"><br>
-						<label for="aficion9">Arte</label>
-						<input type="checkbox" id="aficion9" name="aficiones[]" value="arte"><br>
-						<label for="aficion10">Tecnología</label>
-						<input type="checkbox" id="aficion10" name="aficiones[]" value="tecnologia"><br>
-						<label for="aficion11">Juegos</label>
-						<input type="checkbox" id="aficion11" name="aficiones[]" value="juegos"><br>
-						<label for="aficion12">Política</label>
-						<input type="checkbox" id="aficion12" name="aficiones[]" value="politica">
-					</div>
-				</div>
-			</div>
-		</fieldset>
-		<input type="submit" value="Enviar">
-    </form>
-</main>
+			</fieldset>
+			<input type="image" value="Enviar" src="../img/send.png">
+		</form>
+	</main>
 </body>
+
 </html>

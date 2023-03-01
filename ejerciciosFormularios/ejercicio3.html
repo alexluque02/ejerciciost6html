@@ -2,9 +2,129 @@
 <html>
 
 <head>
-    <title>Ejercicio 6 - Formulario/title>
+    <title>Ejercicio 6 - Formulario</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="ejercicio6.css">
+    <style type="text/css">
+        main{
+            width: 60%;
+            border: 1px solid grey;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        form {
+            width: 100%;
+        }
+
+        h2{
+            padding: 5px;
+            margin: 10px;
+        }
+        fieldset {
+            border-color: transparent;
+        }
+
+        fieldset {
+            flex-direction: column;
+        }
+
+        .primero,
+        .segundo {
+            display: flex;
+        }
+
+        .primero fieldset {
+            flex: 1 1 50%;
+        }
+
+        .segundo fieldset {
+            flex: 1 1 50%;
+        }
+
+        form .alta {
+            border-top: 2px solid grey;
+            width: 96%;
+        }
+
+        form .alta input {
+            float: right;
+        }
+
+        label.titulo {
+            font-size: 1.4em;
+        }
+
+        .requerido {
+            font-size: 1.6em;
+            color: red;
+        }
+
+        label {
+            display: block;
+        }
+
+        div>label {
+            color: rgba(60, 60, 60, 0.824);
+            padding-bottom: 10px;
+            font-size: 0.8em;
+        }
+
+        .municipio {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .municipio input {
+            flex: 1 1 50%;
+            margin-right: 8px;
+        }
+
+        .alinear {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .alinear:first-child {
+            width: 40%;
+        }
+
+        .alinear:last-child {
+            width: 55%;
+        }
+
+        .segundo fieldset:first-child label {
+            padding-top: 14px;
+            padding-bottom: 5px;
+        }
+
+        .segundo fieldset:last-child div {
+            display: flex;
+            justify-content: space-between;
+        }
+        p{
+            color: rgba(255, 0, 0, 0.755);
+        }
+        form fieldset:last-child>input{
+            display: block;
+            font-size: 20px;
+        }
+        form>.primero>fieldset:first-child:hover{
+            background-color: #E6B700;
+        }
+        form>.primero>fieldset:last-child:hover{
+            background-color: aqua;
+        }
+        form>.segundo>fieldset:first-child:hover{
+            background-color: coral;
+        }
+        form>.segundo>fieldset:last-child:hover{
+            background-color: aquamarine;
+        }
+        input:focus {
+            background-color: rgb(252, 248, 184);
+            border: 1px solid rgb(210, 54, 54);
+            outline: none;
+        }
+    </style>
 </head>
 
 <body>

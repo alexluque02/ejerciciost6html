@@ -1,101 +1,91 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .reservation-form {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    padding: 30px;
-  }
-  
-  h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .form-group label {
-    display: block;
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
-  
-  .form-group input, .form-group select {
-    border-radius: 5px;
-    border: 1px solid #cccccc;
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
-  }
-  
-  .quantity {
-    display: flex;
-    align-items: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+fieldset{
+  border: none;
 }
 
-.quantity button {
-    background-color: #f2f2f2;
-    border: none;
-    color: #333333;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
-    height: 40px;
-    width: 40px;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
 }
 
-.quantity button:hover {
-    background-color: #dddddd;
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
 }
+
+.reservation-form {
+  background-color: #90f9e4;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+}
+
+legend {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group2{
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.form-group,.form-group2 label{
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.form-group2 label{
+  text-align: center;
+}
+.form-group input,
+.form-group select,
+.form-group2 input {
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  margin: 5px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+}
+
 
 .quantity input {
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    width: 60px;
-}
-
-.increment-button {
-    border-left: 1px solid #cccccc;
-}
-
-.increment-button:focus, .decrement-button:focus {
-    outline: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  width: 60px;
 }
 
 button[type="submit"] {
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    color: #ffffff;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
-    width: 100%;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+  width: 100%;
 }
 
 button[type="submit"]:hover {
-    background-color: #0069d9;
+  background-color: #0069d9;
 }
